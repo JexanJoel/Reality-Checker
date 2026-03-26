@@ -129,7 +129,7 @@ export default function IdeaDetail() {
             </div>
             <div className="flex flex-row sm:flex-col items-center gap-3 sm:gap-2 flex-shrink-0">
               <div className="relative w-28 h-28 ring-appear">
-                <svg className="w-28 h-28" viewBox="0 0 80 80">
+                <svg className="w-28 h-28 -rotate-90" viewBox="0 0 80 80">
                   <circle cx="40" cy="40" r="36" fill="none" stroke="#f1f5f9" strokeWidth="7" />
                   <circle cx="40" cy="40" r="36" fill="none"
                     stroke="url(#scoreGrad2)" strokeWidth="7"
