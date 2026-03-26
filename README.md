@@ -1,30 +1,21 @@
 <div align="center">
 
 # 🚀 RealityCheck
+
 ### Your idea’s permanent reality check.
 
-<p>
-  <strong>Log your idea, get structured AI analysis, and know whether to build it — before you waste a single day.</strong>
-</p>
+**Log your idea, get structured AI analysis, and know whether to build it - before you waste a single day.**
 
-<p>
-  <a href="YOUR_LIVE_DEMO_LINK">
-    <img src="https://img.shields.io/badge/🌐_Live_Demo-Try_Now-22c55e?style=for-the-badge" alt="Live Demo" />
+<p align="center">
+  <a href="https://reality-checker-three.vercel.app">
+    <img src="https://img.shields.io/badge/Live-Demo-22c55e?style=flat-square" alt="Live Demo" />
   </a>
-  <a href="YOUR_GITHUB_REPO_LINK">
-    <img src="https://img.shields.io/badge/GitHub-Repository-111827?style=for-the-badge&logo=github" alt="GitHub Repo" />
+  <a href="https://github.com/JexanJoel/Reality-Checker">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Repository" />
   </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-Apache_2.0-blue?style=for-the-badge" alt="License" />
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square" alt="License" />
   </a>
-</p>
-
-<p>
-  <img src="https://img.shields.io/badge/Groq-Llama_3.3_70B-10b981?style=flat-square" />
-  <img src="https://img.shields.io/badge/AI-8_Analysis_Dimensions-3b82f6?style=flat-square" />
-  <img src="https://img.shields.io/badge/Modes-Quick_|_Deep_|_Savage-f59e0b?style=flat-square" />
-  <img src="https://img.shields.io/badge/Status-Open_Source-6366f1?style=flat-square" />
-  <img src="https://img.shields.io/badge/Built_For-Builders-0ea5e9?style=flat-square" />
 </p>
 
 </div>
@@ -40,8 +31,8 @@ Instead of guessing whether an idea is worth building, users can submit their co
 It is designed to answer one simple question:
 
 > **Should I build this, improve it, or move on?**
-
 ---
+
 
 ## 🧠 The Problem
 
@@ -140,19 +131,6 @@ This makes it easy to compare ideas and decide what deserves your time.
 
 ---
 
-## 🎥 Demo Flow
-
-In the demo, I show:
-
-- entering a startup / app idea
-- choosing an analysis mode
-- generating a full AI review
-- viewing scores, risks, and MVP guidance
-- saving the result to a dashboard
-- revisiting past idea analyses
-
----
-
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -206,20 +184,3 @@ RealityCheck is useful for:
 - students exploring startup ideas
 - developers testing product concepts
 - makers who want fast honest feedback
-
----
-
-## 🚀 Getting Started
-
-```bash
-# Clone the repo
-git clone YOUR_GITHUB_REPO_LINK
-
-# Enter the project
-cd realitycheck
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
