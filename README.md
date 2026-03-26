@@ -16,12 +16,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/AI_Powered-Groq_+_Llama_3.3_70B-10b981?style=for-the-badge" alt="Groq + Llama" />
-  <img src="https://img.shields.io/badge/Analysis-8_Dimensions-3b82f6?style=for-the-badge" alt="8 Dimensions" />
-  <img src="https://img.shields.io/badge/Modes-Quick_•_Deep_•_Savage-f59e0b?style=for-the-badge" alt="Modes" />
-</p>
-
 </div>
 
 ---
