@@ -34,7 +34,7 @@ It is designed to answer one simple question:
 
 ## 🧠 The Problem
 
-A lot of product ideas sound exciting at first — until weeks of effort reveal:
+A lot of product ideas sound exciting at first - until weeks of effort reveal:
 
 - the target user was never clearly defined
 - the market is too crowded
@@ -42,9 +42,7 @@ A lot of product ideas sound exciting at first — until weeks of effort reveal:
 - the assumptions were weak
 - the idea sounded better than it actually was
 
-Most builders don’t fail because they can’t code.
-
-They fail because they build the **wrong thing**.
+Most builders don’t fail because they can’t code. They fail because they build the **wrong thing**.
 
 **BuildSignal** helps solve that early.
 
@@ -147,9 +145,9 @@ This makes it easy to compare ideas and decide what deserves your time.
 
 ### UI / UX
 - Responsive landing page
-- Clean card-based layout
+- Clean card based layout
 - Structured verdict presentation
-- Fast builder-focused workflow
+- Fast builder focused workflow
 
 ---
 
@@ -160,7 +158,7 @@ BuildSignal is not just another “ask AI about my idea” app.
 It focuses on:
 
 - **structured output over generic text**
-- **decision-making over novelty**
+- **decision making over novelty**
 - **builder usefulness over AI hype**
 - **speed + clarity over complexity**
 
