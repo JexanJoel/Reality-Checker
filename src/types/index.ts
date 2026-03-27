@@ -15,6 +15,8 @@ export interface AnalysisResult {
   summary: string
   score: number
   verdict: "BUILD IT" | "NEEDS WORK" | "RISKY" | "PASS"
+  marketOpportunity?: string
+  competitiveEdge?: string
   strengths: string[]
   weaknesses: string[]
   risks: string[]
@@ -22,6 +24,8 @@ export interface AnalysisResult {
   targetUserClarity: string
   mvpScope: string[]
   validationSteps: string[]
+  monetizationThoughts?: string
+  founderFitNote?: string
   finalRecommendation: string
   created_at?: string
 }
