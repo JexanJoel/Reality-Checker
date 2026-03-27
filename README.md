@@ -18,7 +18,7 @@
 
 ## 🏆 LovHack Season 2 Submission
 
-BuildSignal was built from scratch during **LovHack Season 2** - a 7-day global online hackathon challenging builders to ship real, working products using modern AI tools.
+BuildSignal was built from scratch during **LovHack Season 2** - a 7 day global online hackathon challenging builders to ship real, working products using modern AI tools.
 
 ---
 
@@ -27,10 +27,6 @@ BuildSignal was built from scratch during **LovHack Season 2** - a 7-day global 
 > Click the thumbnail below to watch the demo
 
 [![Watch Demo](screenshots/demo-thumbnail.png)](YOUR_VIDEO_URL_HERE)
-
-<!-- Replace YOUR_VIDEO_URL_HERE with your video link -->
-<!-- To use a badge instead of a thumbnail, replace the line above with: -->
-<!-- [![BuildSignal Demo](https://img.shields.io/badge/▶%20Watch%20Demo-BuildSignal%20Walkthrough-dc2626?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_VIDEO_URL_HERE) -->
 
 ---
 
