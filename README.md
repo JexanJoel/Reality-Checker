@@ -12,19 +12,6 @@
 
 <br/>
 
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq-FF6B35?style=flat-square&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-
-<br/>
-
-> **Built in 7 days for [LovHack Season 2](https://lovhack.devpost.com/) - Global Online Hackathon - March 2026**
-
-<br/>
-
 </div>
 
 ---
@@ -113,6 +100,8 @@ Instead of vague chatbot output, the platform returns a **clear verdict with a s
 
 ## 🔥 Core Features
 
+<div align="center">
+
 | Feature | Description |
 |:---|:---|
 | ⚡ **Instant AI Analysis** | Complete structured review in under 30 seconds |
@@ -124,6 +113,8 @@ Instead of vague chatbot output, the platform returns a **clear verdict with a s
 | 📊 **Idea Scoring** | Each idea scored out of 100 across multiple dimensions |
 | 🧪 **3 Analysis Modes** | Quick - Deep - Savage: choose your feedback intensity |
 | 📌 **Clear Verdict** | BUILD IT - NEEDS WORK - RISKY - PASS |
+
+</div>
 
 ---
 
@@ -168,12 +159,16 @@ Instead of vague chatbot output, the platform returns a **clear verdict with a s
 
 ## 🛠️ Tech Stack
 
+<div align="center">
+
 | Layer | Technology |
 |:---|:---|
 | **Frontend** | React, TypeScript, Tailwind CSS, React Router |
 | **Backend** | Supabase - auth, database, edge functions |
 | **AI** | Groq API + Llama 3.3 70B |
 | **Hosting** | Vercel |
+
+</div>
 
 ---
 
@@ -252,7 +247,11 @@ The result is a tool that is practical, fast to demo, and solves a real problem 
 
 ## 📄 License
 
+<div align="center">
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-2563eb?style=for-the-badge)](./LICENSE)
+
+</div>
 
 ---
 
