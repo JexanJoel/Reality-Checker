@@ -23,7 +23,7 @@ const sections = [
 
 function BulletList({ items, color }: { items: string[]; color: string }) {
   return (
-    <ul className="space-y-3">
+    <ul className="space-y-2.5 sm:space-y-3">
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-3 text-sm text-gray-700 leading-relaxed">
           <span className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: color }} />
@@ -36,7 +36,7 @@ function BulletList({ items, color }: { items: string[]; color: string }) {
 
 function NumberedList({ items, color, bg }: { items: string[]; color: string; bg: string }) {
   return (
-    <ol className="space-y-3">
+    <ol className="space-y-2.5 sm:space-y-3">
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-3 text-sm text-gray-700 leading-relaxed">
           <span className="w-6 h-6 rounded-lg text-xs font-black flex-shrink-0 flex items-center justify-center mt-0.5"
@@ -52,9 +52,9 @@ function InfoCard({ emoji, title, children, bg, border, titleColor }: {
   emoji: string; title: string; children: React.ReactNode; bg: string; border: string; titleColor: string
 }) {
   return (
-    <div className="fade-up rounded-2xl border-2 p-5 card-lift" style={{ background: bg, borderColor: border }}>
+    <div className="fade-up rounded-2xl border-2 p-4 sm:p-5 card-lift" style={{ background: bg, borderColor: border }}>
       <div className="flex items-center gap-2 mb-3">
-        <span style={{ fontSize: 20 }}>{emoji}</span>
+        <span style={{ fontSize: 18 }}>{emoji}</span>
         <h3 className="text-xs font-black uppercase tracking-widest" style={{ color: titleColor }}>{title}</h3>
       </div>
       {children}
@@ -98,15 +98,15 @@ export default function IdeaDetail() {
       {/* Navbar */}
       <nav style={{ background: "linear-gradient(135deg,#0f172a,#1e293b)", borderBottom: "1px solid #334155" }}
         className="sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-10 h-14 sm:h-16 flex items-center justify-between">
           <button onClick={() => navigate("/dashboard")}
             className="flex items-center gap-2 text-sm font-bold transition"
             style={{ color: "#94a3b8" }}
             onMouseEnter={e => e.currentTarget.style.color = "white"}
             onMouseLeave={e => e.currentTarget.style.color = "#94a3b8"}>
-            <ArrowLeft size={16} /> Dashboard
+            <ArrowLeft size={15} /> <span className="hidden xs:inline">Dashboard</span>
           </button>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <span className="text-xs hidden sm:block" style={{ color: "#64748b" }}>
               🕐 {formatDistanceToNow(new Date(idea.created_at), { addSuffix: true })}
             </span>
@@ -115,37 +115,37 @@ export default function IdeaDetail() {
               await deleteIdea.mutateAsync(id!)
               toast.success("🗑️ Deleted"); navigate("/dashboard")
             }}
-              className="flex items-center gap-2 text-xs font-bold px-3.5 py-2 rounded-xl border transition"
+              className="flex items-center gap-1.5 text-xs font-bold px-3 sm:px-3.5 py-2 rounded-xl border transition"
               style={{ background: "#1e293b", borderColor: "#334155", color: "#94a3b8" }}
               onMouseEnter={e => { e.currentTarget.style.background = "#fee2e2"; e.currentTarget.style.borderColor = "#fca5a5"; e.currentTarget.style.color = "#dc2626" }}
               onMouseLeave={e => { e.currentTarget.style.background = "#1e293b"; e.currentTarget.style.borderColor = "#334155"; e.currentTarget.style.color = "#94a3b8" }}>
-              <Trash2 size={13} /> Delete
+              <Trash2 size={12} /> <span className="hidden sm:inline">Delete</span>
             </button>
           </div>
         </div>
       </nav>
 
-      <div className="max-w-4xl mx-auto px-6 sm:px-8 py-8 sm:py-10 space-y-5">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-10 space-y-4 sm:space-y-5">
 
-        {/* Hero */}
-        <div className="fade-up rounded-2xl border-2 p-6 sm:p-10"
+        {/* Hero — score ring beside title on desktop, stacked on mobile */}
+        <div className="fade-up rounded-2xl border-2 p-5 sm:p-8 lg:p-10"
           style={{ background: vc.cardBg, borderColor: vc.border, boxShadow: vc.glow }}>
-          <div className="flex flex-col sm:flex-row sm:items-start gap-8">
-            <div className="flex-1">
-              <div className="flex items-center gap-2 mb-4 flex-wrap">
-                <span className="inline-flex items-center gap-2 text-sm font-black px-4 py-2 rounded-xl border"
+          <div className="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-3 sm:mb-4 flex-wrap">
+                <span className="inline-flex items-center gap-2 text-sm font-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border"
                   style={{ color: vc.color, background: vc.bg, borderColor: vc.border }}>
                   {vc.emoji} {verdict}
                 </span>
                 <span className="text-xs text-gray-400 font-medium">💾 Saved analysis</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-4 leading-tight">{idea.title}</h1>
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 tracking-tight mb-3 sm:mb-4 leading-tight">{idea.title}</h1>
               <p className="text-sm text-gray-600 leading-relaxed">{result.summary}</p>
             </div>
-            <div className="flex flex-row sm:flex-col items-center gap-4 sm:gap-2 flex-shrink-0">
-              {/* FIX: rotate only the arcs via <g>, keep text upright */}
-              <div className="relative w-32 h-32 ring-appear">
-                <svg className="w-32 h-32" viewBox="0 0 80 80">
+            {/* Score ring — inline on mobile (row), column on sm+ */}
+            <div className="flex flex-row sm:flex-col items-center gap-3 sm:gap-2 flex-shrink-0">
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 ring-appear">
+                <svg className="w-24 h-24 sm:w-32 sm:h-32" viewBox="0 0 80 80">
                   <g transform="rotate(-90 40 40)">
                     <circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="7" />
                     <circle cx="40" cy="40" r="36" fill="none"
@@ -165,27 +165,27 @@ export default function IdeaDetail() {
         </div>
 
         {/* Original input */}
-        <div className="fade-up bg-white rounded-2xl border-2 border-gray-100 p-5 card-lift" style={{ animationDelay: "0.06s" }}>
-          <div className="flex items-center gap-2 mb-4">
-            <span style={{ fontSize: 20 }}>📋</span>
+        <div className="fade-up bg-white rounded-2xl border-2 border-gray-100 p-4 sm:p-5 card-lift" style={{ animationDelay: "0.06s" }}>
+          <div className="flex items-center gap-2 mb-3 sm:mb-4">
+            <span style={{ fontSize: 18 }}>📋</span>
             <h3 className="text-xs font-black uppercase tracking-widest text-gray-400">Original input</h3>
           </div>
-          <div className="grid sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
             {[
-              { emoji: "👥", label: "Target users", value: idea.input.targetUsers },
-              { emoji: "🎚️", label: "Mode", value: idea.input.mode, capitalize: true },
+              { emoji: "👥", label: "Target users", value: idea.input.targetUsers, span: "" },
+              { emoji: "🎚️", label: "Mode", value: idea.input.mode, capitalize: true, span: "" },
             ].map((f, i) => (
-              <div key={i} className="rounded-xl p-3.5" style={{ background: "#f8fafc", border: "1px solid #f1f5f9" }}>
+              <div key={i} className="rounded-xl p-3 sm:p-3.5" style={{ background: "#f8fafc", border: "1px solid #f1f5f9" }}>
                 <span className="text-xs font-bold text-gray-400 block mb-1">{f.emoji} {f.label}</span>
                 <span className={`text-sm font-semibold text-gray-800 ${f.capitalize ? "capitalize" : ""}`}>{f.value}</span>
               </div>
             ))}
-            <div className="sm:col-span-2 rounded-xl p-3.5" style={{ background: "#f8fafc", border: "1px solid #f1f5f9" }}>
+            <div className="sm:col-span-2 rounded-xl p-3 sm:p-3.5" style={{ background: "#f8fafc", border: "1px solid #f1f5f9" }}>
               <span className="text-xs font-bold text-gray-400 block mb-1">🔧 Problem solved</span>
               <span className="text-sm font-medium text-gray-800">{idea.input.problemSolved}</span>
             </div>
             {idea.input.goal && (
-              <div className="sm:col-span-2 rounded-xl p-3.5" style={{ background: "#f8fafc", border: "1px solid #f1f5f9" }}>
+              <div className="sm:col-span-2 lg:col-span-4 rounded-xl p-3 sm:p-3.5" style={{ background: "#f8fafc", border: "1px solid #f1f5f9" }}>
                 <span className="text-xs font-bold text-gray-400 block mb-1">🏆 Goal</span>
                 <span className="text-sm font-medium text-gray-800">{idea.input.goal}</span>
               </div>
@@ -195,7 +195,7 @@ export default function IdeaDetail() {
 
         {/* Market & Competitive */}
         {(result.marketOpportunity || result.competitiveEdge) && (
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             {result.marketOpportunity && (
               <InfoCard emoji="📈" title="Market opportunity" bg="linear-gradient(135deg,#f0fdf4,#dcfce7)" border="#86efac" titleColor="#14532d">
                 <p className="text-sm text-gray-700 leading-relaxed">{result.marketOpportunity}</p>
@@ -209,16 +209,16 @@ export default function IdeaDetail() {
           </div>
         )}
 
-        {/* 4 sections */}
-        <div className="grid sm:grid-cols-2 gap-5">
+        {/* 4 analysis sections — 2-col on sm, 4-col on lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {sections.map((s, i) => {
             const items = (result as any)[s.key] ?? []
             return (
               <div key={s.key} className="fade-up rounded-2xl border-2 card-lift"
                 style={{ background: s.cardBg, borderColor: s.border, animationDelay: `${(i + 2) * 0.06}s` }}>
-                <div className="p-5">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span style={{ fontSize: 22 }}>{s.emoji}</span>
+                <div className="p-4 sm:p-5">
+                  <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                    <span style={{ fontSize: 20 }}>{s.emoji}</span>
                     <h3 className="text-xs font-black uppercase tracking-widest" style={{ color: s.color }}>{s.title}</h3>
                   </div>
                   <BulletList items={items} color={s.color} />
@@ -228,11 +228,13 @@ export default function IdeaDetail() {
           })}
         </div>
 
+        {/* Target user clarity — full width */}
         <InfoCard emoji="🎯" title="Target user clarity" bg="linear-gradient(135deg,#eff6ff,#dbeafe)" border="#93c5fd" titleColor="#1e3a8a">
           <p className="text-sm text-blue-900 leading-relaxed">{result.targetUserClarity}</p>
         </InfoCard>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        {/* MVP + Validation */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           <InfoCard emoji="🗺️" title="MVP scope" bg="linear-gradient(135deg,#faf5ff,#ede9fe)" border="#c4b5fd" titleColor="#4c1d95">
             <NumberedList items={result.mvpScope ?? []} color="#4c1d95" bg="#ede9fe" />
           </InfoCard>
@@ -241,8 +243,9 @@ export default function IdeaDetail() {
           </InfoCard>
         </div>
 
+        {/* Monetization + Founder fit */}
         {(result.monetizationThoughts || result.founderFitNote) && (
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             {result.monetizationThoughts && (
               <InfoCard emoji="💰" title="Monetization thoughts" bg="linear-gradient(135deg,#fffbeb,#fef3c7)" border="#fcd34d" titleColor="#78350f">
                 <p className="text-sm text-amber-900 leading-relaxed">{result.monetizationThoughts}</p>
@@ -256,21 +259,23 @@ export default function IdeaDetail() {
           </div>
         )}
 
-        <div className="fade-up relative rounded-2xl p-8 overflow-hidden" style={{ background: "#0f172a" }}>
+        {/* Final recommendation */}
+        <div className="fade-up relative rounded-2xl p-6 sm:p-8 overflow-hidden" style={{ background: "#0f172a" }}>
           <div className="absolute inset-0 opacity-[0.05]"
             style={{ backgroundImage: "radial-gradient(circle, #94a3b8 1px, transparent 1px)", backgroundSize: "18px 18px" }} />
           <div className="relative">
-            <div className="flex items-center gap-3 mb-4">
-              <span style={{ fontSize: 26 }}>💬</span>
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <span style={{ fontSize: 24 }}>💬</span>
               <h3 className="text-xs font-black uppercase tracking-widest" style={{ color: "#64748b" }}>Final recommendation</h3>
             </div>
-            <p className="text-base leading-relaxed" style={{ color: "#e2e8f0" }}>{result.finalRecommendation}</p>
+            <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#e2e8f0" }}>{result.finalRecommendation}</p>
           </div>
         </div>
 
-        <div className="pb-8 fade-up">
+        {/* CTA */}
+        <div className="pb-6 sm:pb-8 fade-up">
           <button onClick={() => navigate("/new")}
-            className="btn-shine w-full flex items-center justify-center gap-2 text-white font-black py-4 rounded-xl text-base"
+            className="btn-shine w-full flex items-center justify-center gap-2 text-white font-black py-3.5 sm:py-4 rounded-xl text-sm sm:text-base"
             style={{ background: "linear-gradient(135deg,#16a34a,#22c55e)", boxShadow: "0 8px 28px rgba(22,163,74,0.4)" }}
             onMouseEnter={e => e.currentTarget.style.background = "linear-gradient(135deg,#15803d,#16a34a)"}
             onMouseLeave={e => e.currentTarget.style.background = "linear-gradient(135deg,#16a34a,#22c55e)"}>

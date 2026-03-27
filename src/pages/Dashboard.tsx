@@ -28,70 +28,80 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen" style={{ background: "#f1f5f9", fontFamily: "var(--font)" }}>
 
-      {/* Navbar — full width, more presence */}
+      {/* Navbar */}
       <nav style={{ background: "linear-gradient(135deg,#0f172a,#1e293b)", borderBottom: "1px solid #334155" }}
         className="sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate("/")}>
-            <div className="w-9 h-9 rounded-xl flex items-center justify-center text-white text-sm font-black"
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-10 h-14 sm:h-16 flex items-center justify-between gap-3">
+
+          {/* Logo */}
+          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer flex-shrink-0" onClick={() => navigate("/")}>
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center text-white text-xs sm:text-sm font-black"
               style={{ background: "linear-gradient(135deg,#16a34a,#22c55e)", boxShadow: "0 4px 14px rgba(22,163,74,0.5)" }}>
               RC
             </div>
-            <div>
-              <span className="font-black text-white text-base tracking-tight">RealityCheck</span>
-              <span className="ml-2 text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: "#1e3a5f", color: "#60a5fa" }}>BETA</span>
+            <div className="flex items-center gap-1.5">
+              <span className="font-black text-white text-sm sm:text-base tracking-tight">RealityCheck</span>
+              <span className="text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded-full" style={{ background: "#1e3a5f", color: "#60a5fa" }}>BETA</span>
             </div>
           </div>
-          <div className="flex items-center gap-3">
+
+          {/* Right actions */}
+          <div className="flex items-center gap-2">
+            {/* Email — hidden on mobile */}
             <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ background: "#1e293b", border: "1px solid #334155" }}>
               <div className="w-2 h-2 rounded-full bg-green-400 pulse-dot" />
               <span className="text-xs text-slate-400 truncate max-w-[140px]">{user?.email}</span>
             </div>
+
+            {/* New analysis — icon+text on sm+, icon-only on mobile */}
             <button onClick={() => navigate("/new")}
-              className="btn-shine flex items-center gap-2 text-white text-sm font-bold px-5 py-2.5 rounded-xl"
-              style={{ background: "linear-gradient(135deg,#16a34a,#22c55e)", boxShadow: "0 4px 14px rgba(22,163,74,0.5)" }}>
-              <Plus size={16} /> New analysis
+              className="btn-shine flex items-center gap-1.5 text-white font-bold rounded-xl transition"
+              style={{ background: "linear-gradient(135deg,#16a34a,#22c55e)", boxShadow: "0 4px 14px rgba(22,163,74,0.5)", padding: "8px 14px" }}>
+              <Plus size={15} />
+              <span className="hidden sm:inline text-sm">New analysis</span>
             </button>
+
+            {/* Sign out */}
             <button onClick={async () => { await signOut(); toast.success("Signed out 👋"); navigate("/") }}
-              className="w-10 h-10 rounded-xl flex items-center justify-center transition"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition flex-shrink-0"
               style={{ background: "#1e293b", border: "1px solid #334155", color: "#94a3b8" }}
               onMouseEnter={e => { e.currentTarget.style.background = "#fee2e2"; e.currentTarget.style.color = "#dc2626" }}
               onMouseLeave={e => { e.currentTarget.style.background = "#1e293b"; e.currentTarget.style.color = "#94a3b8" }}>
-              <LogOut size={16} />
+              <LogOut size={15} />
             </button>
           </div>
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-8 sm:py-10">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-10">
 
         {/* Header */}
-        <div className="mb-8 fade-up">
+        <div className="mb-6 sm:mb-8 fade-up">
           <div className="flex items-center gap-3 mb-1">
-            <span style={{ fontSize: 32 }}>🧠</span>
-            <h1 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">Your idea analyses</h1>
+            <span style={{ fontSize: 28 }}>🧠</span>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight">Your idea analyses</h1>
           </div>
-          <p className="text-sm text-gray-500 ml-12">
+          <p className="text-sm text-gray-500 ml-11">
             {ideas?.length ? `${ideas.length} idea${ideas.length !== 1 ? "s" : ""} analysed` : "No analyses yet — time to reality-check your first idea!"}
           </p>
         </div>
 
         {/* Stats */}
         {ideas && ideas.length > 0 && (
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
             {[
-              { emoji: "📊", label: "Total analyses", value: ideas.length,    color: "#1e40af", bg: "linear-gradient(135deg,#eff6ff,#dbeafe)", border: "#93c5fd" },
+              { emoji: "📊", label: "Total analyses", value: ideas.length,     color: "#1e40af", bg: "linear-gradient(135deg,#eff6ff,#dbeafe)", border: "#93c5fd" },
               { emoji: "⭐", label: "Average score",  value: `${avgScore}/100`, color: "#78350f", bg: "linear-gradient(135deg,#fffbeb,#fef3c7)", border: "#fcd34d" },
-              { emoji: "🚀", label: "Build it",       value: buildCount,       color: "#14532d", bg: "linear-gradient(135deg,#f0fdf4,#dcfce7)", border: "#86efac" },
-              { emoji: "📉", label: "Pass / Risky",   value: passRisky,        color: "#7f1d1d", bg: "linear-gradient(135deg,#fef2f2,#fee2e2)", border: "#fca5a5" },
+              { emoji: "🚀", label: "Build it",       value: buildCount,        color: "#14532d", bg: "linear-gradient(135deg,#f0fdf4,#dcfce7)", border: "#86efac" },
+              { emoji: "📉", label: "Pass / Risky",   value: passRisky,         color: "#7f1d1d", bg: "linear-gradient(135deg,#fef2f2,#fee2e2)", border: "#fca5a5" },
             ].map((s, i) => (
-              <div key={i} className="fade-up rounded-2xl border-2 p-5 card-lift"
+              <div key={i} className="fade-up rounded-2xl border-2 p-4 sm:p-5 card-lift"
                 style={{ background: s.bg, borderColor: s.border, animationDelay: `${i * 0.06}s` }}>
                 <div className="flex items-center gap-2 mb-2">
-                  <span style={{ fontSize: 22 }}>{s.emoji}</span>
+                  <span style={{ fontSize: 18 }}>{s.emoji}</span>
                   <span className="text-xs font-bold" style={{ color: s.color }}>{s.label}</span>
                 </div>
-                <p className="text-3xl font-black" style={{ color: s.color }}>{s.value}</p>
+                <p className="text-2xl sm:text-3xl font-black" style={{ color: s.color }}>{s.value}</p>
               </div>
             ))}
           </div>
@@ -112,14 +122,14 @@ export default function Dashboard() {
 
         {/* Empty */}
         {!isLoading && (!ideas || ideas.length === 0) && (
-          <div className="text-center py-28 fade-up">
-            <div className="text-8xl mb-5">💡</div>
-            <h2 className="text-2xl font-black text-gray-900 mb-3">No analyses yet</h2>
+          <div className="text-center py-20 sm:py-28 fade-up">
+            <div className="text-7xl sm:text-8xl mb-5">💡</div>
+            <h2 className="text-xl sm:text-2xl font-black text-gray-900 mb-3">No analyses yet</h2>
             <p className="text-sm text-gray-400 mb-8 max-w-sm mx-auto leading-relaxed">
               Run your first reality check and find out if your idea is actually worth building.
             </p>
             <button onClick={() => navigate("/new")}
-              className="btn-shine inline-flex items-center gap-2 text-white font-black px-8 py-3.5 rounded-xl text-base"
+              className="btn-shine inline-flex items-center gap-2 text-white font-black px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
               style={{ background: "linear-gradient(135deg,#16a34a,#22c55e)", boxShadow: "0 8px 28px rgba(22,163,74,0.4)" }}>
               🚀 Analyse my first idea
             </button>
@@ -128,7 +138,7 @@ export default function Dashboard() {
 
         {/* Grid */}
         {!isLoading && ideas && ideas.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {ideas.map((idea: any, idx: number) => {
               const result  = idea.result
               const verdict = result?.verdict ?? "NEEDS WORK"
@@ -140,7 +150,7 @@ export default function Dashboard() {
                   style={{ borderColor: vc.border, animationDelay: `${idx * 0.04}s` }}
                   onMouseEnter={e => (e.currentTarget.style.background = vc.cardBg)}
                   onMouseLeave={e => (e.currentTarget.style.background = "white")}>
-                  <div className="p-5">
+                  <div className="p-4 sm:p-5">
                     <div className="flex items-start justify-between gap-2 mb-3">
                       <h3 className="text-sm font-bold text-gray-900 leading-snug flex-1 group-hover:text-gray-700 transition line-clamp-2">
                         {idea.title}
@@ -176,7 +186,7 @@ export default function Dashboard() {
               )
             })}
             <div onClick={() => navigate("/new")}
-              className="group rounded-2xl border-2 border-dashed border-gray-200 cursor-pointer hover:border-green-400 transition-all duration-200 flex flex-col items-center justify-center min-h-[220px] card-lift bg-white"
+              className="group rounded-2xl border-2 border-dashed border-gray-200 cursor-pointer hover:border-green-400 transition-all duration-200 flex flex-col items-center justify-center min-h-[200px] sm:min-h-[220px] card-lift bg-white"
               onMouseEnter={e => (e.currentTarget.style.background = "linear-gradient(135deg,#f0fdf4,#dcfce7)")}
               onMouseLeave={e => (e.currentTarget.style.background = "white")}>
               <div className="text-4xl mb-3 group-hover:scale-125 transition-transform duration-200">✨</div>
