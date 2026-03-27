@@ -75,7 +75,7 @@ export default function Landing() {
             </span>
           </div>
           <div className="hidden md:flex items-center gap-2">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/JexanJoel/Build-Signal" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition px-3 py-2">
               <GithubIcon size={15} /> GitHub
             </a>
@@ -97,7 +97,7 @@ export default function Landing() {
 
         {menuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-2">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/JexanJoel/Build-Signal" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-gray-600 px-3 py-2.5 rounded-xl hover:bg-gray-50">
               <GithubIcon size={15} /> GitHub
             </a>
