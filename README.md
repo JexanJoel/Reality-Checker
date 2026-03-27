@@ -4,13 +4,17 @@
 
 ### Your idea's permanent reality check.
 
-<br/>
-
-[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-build--signal.vercel.app-22c55e?style=for-the-badge)](https://build-signal.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-Build--Signal-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JexanJoel/Build-Signal)
-[![License](https://img.shields.io/badge/License-Apache%202.0-2563eb?style=for-the-badge)](./LICENSE)
-
-<br/>
+<p align="center">
+  <a href="https://build-signal.vercel.app/">
+    <img src="https://img.shields.io/badge/Live%20Demo-22c55e?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo" />
+  </a>
+  <a href="https://github.com/JexanJoel/Build-Signal">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/Apache%202.0-2563eb?style=flat-square" alt="Apache 2.0" />
+  </a>
+</p>
 
 </div>
 
