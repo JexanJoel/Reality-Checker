@@ -5,13 +5,13 @@
 ### Your idea's permanent reality check.
 
 <p align="center">
-  <a href="https://build-signal.vercel.app/">
+  <a href="https://build-signal.vercel.app/" style="text-decoration:none;">
     <img src="https://img.shields.io/badge/Live%20Demo-22c55e?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/JexanJoel/Build-Signal">
+  </a><!--
+  --><a href="https://github.com/JexanJoel/Build-Signal" style="text-decoration:none;">
     <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  <a href="./LICENSE">
+  </a><!--
+  --><a href="./LICENSE" style="text-decoration:none;">
     <img src="https://img.shields.io/badge/Apache%202.0-2563eb?style=flat-square" alt="Apache 2.0" />
   </a>
 </p>
