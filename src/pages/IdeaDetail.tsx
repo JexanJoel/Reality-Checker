@@ -127,25 +127,29 @@ export default function IdeaDetail() {
 
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-10 space-y-4 sm:space-y-5">
 
-        {/* Hero — score ring beside title on desktop, stacked on mobile */}
+        {/* Hero */}
         <div className="fade-up rounded-2xl border-2 p-5 sm:p-8 lg:p-10"
           style={{ background: vc.cardBg, borderColor: vc.border, boxShadow: vc.glow }}>
-          <div className="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+          {/* Always a row — ring stays right-aligned on all screen sizes */}
+          <div className="flex flex-row items-start gap-4 sm:gap-8">
+
+            {/* Left: badges + title + summary */}
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 mb-3 sm:mb-4 flex-wrap">
-                <span className="inline-flex items-center gap-2 text-sm font-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border"
+              <div className="flex items-center gap-2 mb-3 flex-wrap">
+                <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-black px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl border"
                   style={{ color: vc.color, background: vc.bg, borderColor: vc.border }}>
                   {vc.emoji} {verdict}
                 </span>
-                <span className="text-xs text-gray-400 font-medium">💾 Saved analysis</span>
+                <span className="text-xs text-gray-400 font-medium hidden sm:inline">💾 Saved analysis</span>
               </div>
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 tracking-tight mb-3 sm:mb-4 leading-tight">{idea.title}</h1>
-              <p className="text-sm text-gray-600 leading-relaxed">{result.summary}</p>
+              <h1 className="text-base sm:text-2xl lg:text-3xl font-black text-gray-900 tracking-tight mb-2 sm:mb-4 leading-tight">{idea.title}</h1>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-4 sm:line-clamp-none">{result.summary}</p>
             </div>
-            {/* Score ring — inline on mobile (row), column on sm+ */}
-            <div className="flex flex-row sm:flex-col items-center gap-3 sm:gap-2 flex-shrink-0">
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 ring-appear">
-                <svg className="w-24 h-24 sm:w-32 sm:h-32" viewBox="0 0 80 80">
+
+            {/* Right: score ring — compact on mobile, larger on sm+ */}
+            <div className="flex flex-col items-center gap-1 flex-shrink-0">
+              <div className="ring-appear">
+                <svg className="w-16 h-16 sm:w-28 sm:h-28" viewBox="0 0 80 80">
                   <g transform="rotate(-90 40 40)">
                     <circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="7" />
                     <circle cx="40" cy="40" r="36" fill="none"
@@ -159,8 +163,9 @@ export default function IdeaDetail() {
                     fontSize="9" fill="#94a3b8">/100</text>
                 </svg>
               </div>
-              <span className="text-xs text-gray-500 font-semibold">Overall score</span>
+              <span className="text-[10px] sm:text-xs text-gray-500 font-semibold">Score</span>
             </div>
+
           </div>
         </div>
 

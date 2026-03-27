@@ -2,31 +2,53 @@
 
 # 🚀 BuildSignal
 
-## Your idea’s permanent reality check.
+### Your idea's permanent reality check.
 
 <p align="center">
   <a href="https://build-signal.vercel.app/">
-    <img src="https://img.shields.io/badge/🌐_Live_Demo-Try_BuildSignal-22c55e?style=for-the-badge" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/🌐 Live Demo-Try BuildSignal-22c55e?style=for-the-badge" alt="Live Demo" />
   </a>
+  &nbsp;
   <a href="https://github.com/JexanJoel/Build-Signal">
-    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" />
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
+  &nbsp;
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/License-Apache_2.0-2563eb?style=for-the-badge" alt="License" />
   </a>
 </p>
 
+<br/>
+
+> **Built in 7 days for [LovHack Season 2](https://lovhack.devpost.com/) · Global Online Hackathon · March 2026**
+
+<br/>
+
 </div>
+
+---
+
+## 🏆 LovHack Season 2 Submission
+
+BuildSignal was built from scratch during **LovHack Season 2** — a 7-day global online hackathon challenging builders to ship real, working products using modern AI tools.
+
+| | |
+|---|---|
+| 🗓 **Hackathon** | LovHack Season 2 |
+| ⏱ **Timeline** | 7 days |
+| 🌍 **Format** | Global · Online |
+| 🎯 **Theme** | Machine Learning / AI · Productivity · Web |
+| 🔗 **Live Demo** | [build-signal.vercel.app](https://build-signal.vercel.app/) |
 
 ---
 
 ## ✨ What is BuildSignal?
 
-**BuildSignal** is an AI-powered idea validation platform built for builders, indie hackers, students, and developers who want honest feedback before committing time to the wrong product.
+**BuildSignal** is an AI-powered idea validation platform for builders, indie hackers, students, and developers who want honest feedback before committing weeks to the wrong product.
 
-Instead of guessing whether an idea is worth building, users can submit their concept and receive a **structured, scored, plain-English analysis** covering clarity, risk, MVP scope, validation steps, and final recommendation.
+Submit your concept. Get a **structured, scored, plain-English analysis** covering clarity, risk, market opportunity, MVP scope, validation steps, and a final recommendation — all in under 30 seconds.
 
-It is designed to answer one simple question:
+It answers one simple question:
 
 > **Should I build this, improve it, or move on?**
 
@@ -34,17 +56,17 @@ It is designed to answer one simple question:
 
 ## 🧠 The Problem
 
-A lot of product ideas sound exciting at first - until weeks of effort reveal:
+Most product ideas sound exciting — until reality sets in:
 
-- the target user was never clearly defined
-- the market is too crowded
-- the MVP is too broad
-- the assumptions were weak
-- the idea sounded better than it actually was
+- The target user was never clearly defined
+- The market is too crowded
+- The MVP is too broad to ship
+- The assumptions never held up
+- Weeks of effort went into the wrong thing
 
-Most builders don’t fail because they can’t code. They fail because they build the **wrong thing**.
+**Builders don't fail because they can't code. They fail because they build the wrong thing.**
 
-**BuildSignal** helps solve that early.
+BuildSignal solves that before a single line of code is written.
 
 ---
 
@@ -52,131 +74,171 @@ Most builders don’t fail because they can’t code. They fail because they bui
 
 BuildSignal gives every idea a fast, structured AI review so builders can:
 
-- understand who the product is really for
-- spot hidden risks before building
-- define a smaller, smarter MVP
-- validate demand with concrete next steps
-- get a final recommendation they can act on
+- Understand who the product is actually for
+- Spot hidden risks and weak assumptions early
+- Define a smaller, smarter MVP
+- Get concrete validation steps to test demand
+- Receive a final verdict they can act on immediately
 
-Instead of vague chatbot output, the platform returns a **clear verdict** and a breakdown users can actually use.
+Instead of vague chatbot output, the platform returns a **clear verdict with a scored breakdown** users can actually use.
 
 ---
 
 ## 🔥 Core Features
 
-### ⚡ Instant AI Analysis
-Get a complete structured review in under 30 seconds from a single idea submission.
+| Feature | Description |
+|---|---|
+| ⚡ **Instant AI Analysis** | Complete structured review in under 30 seconds |
+| 🎯 **User Clarity Score** | Measures how well-defined your target audience is |
+| 🛡️ **Risk Detection** | Surfaces weak assumptions and failure points early |
+| 🗺️ **MVP Scope Planner** | Turns messy ideas into a focused, buildable first version |
+| ✅ **Validation Steps** | Actionable ways to test demand before building |
+| 💾 **Dashboard History** | Save and revisit analyses as your thinking evolves |
+| 📊 **Idea Scoring** | Each idea scored out of 100 across multiple dimensions |
+| 🧪 **3 Analysis Modes** | Quick · Deep · Savage — choose your feedback intensity |
+| 📌 **Clear Verdict** | BUILD IT · NEEDS WORK · RISKY · PASS |
 
-### 🎯 User Clarity Score
-See how clearly your target audience is defined before writing a line of code.
+---
 
-### 🛡️ Risk & Assumption Detection
-Surface weak assumptions and potential failure points early.
+## 🧪 3 Analysis Modes
 
-### 🗺️ MVP Scope Planner
-Turn messy ideas into a focused first version that is actually buildable.
-
-### ✅ Validation Steps
-Receive actionable ways to test demand before spending days or weeks building.
-
-### 💾 Dashboard History
-Save past analyses and revisit them later as your thinking evolves.
-
-### 📊 Idea Scoring
-Each idea gets a score out of 100 across multiple dimensions.
-
-### 🧪 3 Analysis Modes
-Choose the type of feedback you want:
-- **Quick** → fast overview
-- **Deep** → fuller breakdown
-- **Savage** → brutally honest feedback
-
-### 📌 Final Recommendation
-Every analysis ends with a clear direction:
-- **BUILD IT**
-- **NEEDS WORK**
-- **PASS**
+| Mode | Description |
+|---|---|
+| ⚡ **Quick** | Fast overview with key insights |
+| 🔍 **Deep** | Thorough breakdown across all 8 dimensions |
+| 🔥 **Savage** | Brutally honest — no filter, no sugar coating |
 
 ---
 
 ## 🏗️ How It Works
 
-### 1. Describe your idea
-Enter your title, problem, target user, and concept in plain English.
+```
+1. Describe your idea
+   → Title, target user, problem statement, and concept in plain English
 
-### 2. Choose analysis mode
-Select Quick, Deep, or Savage mode depending on how much detail you want.
+2. Choose analysis mode
+   → Quick, Deep, or Savage depending on how much detail you need
 
-### 3. Get your verdict
-BuildSignal scores the idea and returns a structured analysis across multiple dimensions.
+3. Get your verdict
+   → Scored analysis across strengths, weaknesses, risks, MVP scope,
+     market opportunity, validation steps, and final recommendation
 
-### 4. Save and iterate
-Store analyses in your dashboard and improve ideas over time.
+4. Save and iterate
+   → All analyses saved to your dashboard to revisit and improve over time
+```
 
 ---
 
 ## 🧾 Example Output
 
 | Idea | Score | Verdict |
-|------|------:|---------|
-| Micro-SaaS expense tracker | 84/100 | ✅ BUILD IT |
-| AI chatbot for restaurants | 58/100 | ⚠️ NEEDS WORK |
+|---|---:|---|
+| Micro-SaaS expense tracker for freelancers | 84/100 | 🚀 BUILD IT |
+| AI chatbot for restaurants | 58/100 | 🔧 NEEDS WORK |
 | Crypto portfolio tracker | 29/100 | ❌ PASS |
-
-This makes it easy to compare ideas and decide what deserves your time.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React**
-- **TypeScript**
-- **Tailwind CSS**
-- **React Router**
+**Frontend**
+- React + TypeScript
+- Tailwind CSS
+- React Router
 
-### Backend / Platform
-- **Authentication layer**
-- **Saved dashboard / persistent analysis history**
+**Backend / Platform**
+- Supabase — authentication, database, edge functions
+- Persistent analysis history via saved dashboard
 
-### AI
-- **Groq**
-- **Llama 3.3 70B**
-
-### UI / UX
-- Responsive landing page
-- Clean card based layout
-- Structured verdict presentation
-- Fast builder focused workflow
+**AI**
+- Groq API
+- Llama 3.3 70B
 
 ---
 
-## 🧠 Why This Project Stands Out
+## 📁 Project Structure
 
-BuildSignal is not just another “ask AI about my idea” app.
+```
+src/
+├── components/        # Shared UI components
+├── hooks/             # useAuth, useIdeas, useDeleteIdea
+├── pages/
+│   ├── Landing.tsx    # Marketing landing page
+│   ├── Dashboard.tsx  # Saved ideas overview + stats
+│   ├── NewAnalysis.tsx # Idea submission form
+│   └── IdeaDetail.tsx  # Full analysis result view
+├── lib/
+│   └── supabase.ts    # Supabase client
+└── types/             # AnalysisResult and shared types
+
+supabase/
+└── functions/
+    └── analyze-idea/  # Edge function calling Groq API
+```
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/JexanJoel/Build-Signal
+cd Build-Signal
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Add your SUPABASE_URL, SUPABASE_ANON_KEY, and GROQ_API_KEY
+
+# Start the dev server
+npm run dev
+```
+
+---
+
+## 🧠 Why BuildSignal Stands Out
+
+This is not another "ask AI about my idea" chatbot.
+
+BuildSignal is built around a **real workflow**:
+
+```
+idea → analysis → verdict → save → improve
+```
 
 It focuses on:
 
-- **structured output over generic text**
-- **decision making over novelty**
-- **builder usefulness over AI hype**
-- **speed + clarity over complexity**
+- **Structured output** over generic text
+- **Decision making** over novelty
+- **Builder usefulness** over AI hype
+- **Speed and clarity** over complexity
 
-The product is intentionally built around a real workflow:
-
-> idea → analysis → verdict → save → improve
-
-That makes it practical, memorable, and easy to demo.
+The result is a tool that is practical, fast to demo, and solves a real problem that every builder faces — deciding what is actually worth building.
 
 ---
 
 ## 🎯 Built For
 
-BuildSignal is useful for:
+- Indie hackers and solo founders
+- Hackathon builders
+- Students exploring startup ideas
+- Developers testing product concepts
+- Makers who want fast, honest feedback
 
-- indie hackers
-- solo founders
-- hackathon builders
-- students exploring startup ideas
-- developers testing product concepts
-- makers who want fast honest feedback
+---
+
+## 📄 License
+
+Licensed under the [Apache 2.0 License](./LICENSE).
+
+---
+
+<div align="center">
+
+Built with ⚡ during **LovHack Season 2** · March 2026
+
+**[Try it live →](https://build-signal.vercel.app/)**
+
+</div>
