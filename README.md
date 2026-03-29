@@ -277,7 +277,7 @@ The result is a tool that is practical, fast to demo, and solves a real problem 
 
 <div align="center">
 
-Built with ⚡ during **LovHack Season 2** - March 2026
+Built during **LovHack Season 2** - March 2026
 
 
 </div>
